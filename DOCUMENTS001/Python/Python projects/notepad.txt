@@ -1,0 +1,84 @@
+num_days = 5
+def main ():
+    sales = [0]*num_days
+    index = 0
+    print("enter the sale for each day.")
+
+    while index < num_days:
+        print('day#',index +1,":",sep="",end = "")
+        sales[index] = float(input())
+        index +=1
+    print("here are the values you entered:")
+    for value in sales:
+        print(value)
+main()
+
+
+import random
+
+
+def main():
+    even = 0
+    odd = 0
+    total = 0
+    number_list = [0] * 10
+    print("Generated Numbers")
+    for x in range(0, 10):
+        y = random.randint(1, 100)
+        print(x + 1, "\t", y)
+        number_list[x] = y
+        if y % 2 == 0:
+            even += 1
+        else:
+            odd += 1
+        total += y
+    average = total / 10
+    print("Number of evens:", even)
+    print("Number of odds:", odd)
+    print("Average of Generated Numbers:", average)
+
+
+main()
+
+
+
+
+def main():
+    people = ["ghassan", 99, "mohammad", 21, "omar", 100, "basheer", 55, "mahmoud", 44, "ahmed", 88]
+
+    search = input("Enter the name to search: ")
+
+    if search in people:
+        index = people.index(search)
+        print(search, "is", people[index+1], "years old")
+    else:
+        print(search, "is not found in the list.")
+
+
+main()
+
+def main():
+    people=["ali",17,"veli",20,"can",28,"tom",35,"jane",14,"ken",23]
+    search=input("enter a name to search:")
+    if search in people:
+        index=people.index(search)
+        print(search,"is",people[index+1],"years old")
+    else:
+        print(search,"is not found in the list.")
+
+main()
+
+
+
+
+
+
+
+def sum ():
+    count = 0
+    x = int(input("enter how many number you want to be calculated:"))
+    for i in range (x):
+      y = float(input("enter a number :"))
+      count+= y
+    print(count)
+sum()

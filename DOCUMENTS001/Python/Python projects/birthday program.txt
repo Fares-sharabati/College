@@ -1,0 +1,60 @@
+birthday program
+
+
+def main ():
+    birthdays = {}
+    choice = 0
+    while choice != 5:
+        if choice == 1:
+            look_up(birthdays)
+        elif choice == 2:
+            add(birthdays)
+        elif choice == 3:
+            change(birthdays)
+        elif choice == 4:
+            delete(birthdays)
+def get_menu_choice():
+    print()
+    print("friends and their birthdays")
+    print("___________________________")
+    print("1.look up a birthday")
+    print("2.add a new birthday")
+    print("3.change a birthday")
+    print("4.delete a birthday")
+    print("5.quit the program")
+    print()
+
+    choice = int(input("enter your choice:"))
+    while choice <1 or choice > 5:
+        choice = int(input("enter a valid choice:"))
+
+    return choice
+
+def look_up(birthdays):
+    name = input("enter a name:")
+    print(birthdays.get(name,"not found"))
+
+def add(birthdays):
+    name = input("enter a name:")
+    bday = input("enter a birthday")
+   if name not in birthdays:
+       birthdays[name]=bday
+   else :
+       print("that etry alredy exists.")
+def look_up(birthdays):
+    name = input("enter a name:")
+   print(birthdays.get(name."not found."))
+def change(birthdays):
+    name = input("enter a name:")
+    if name in birthdays:
+        bday = input("enter a new birthday:")
+        birthdays[name] = bday
+    else:
+        print("that name is not found")
+def delete(birthday):
+    name = input("enter a name:")
+    if name in birthday:
+        del birthday[name]
+    else:
+        print("that name is not found.")
+main()
